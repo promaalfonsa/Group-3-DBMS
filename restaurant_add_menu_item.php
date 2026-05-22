@@ -1,8 +1,6 @@
 <?php
-require 'db.php';
-require 'functions.php';
-$pageTitle = "Add Menu Item";
-require 'layout.php';
+$pageTitle = "Add Menu";
+require 'restaurant_layout.php';
 if (!is_logged_in()) { header('Location: login.php'); exit; }
 if ($_SESSION['role'] !== 'restaurant' && $_SESSION['role'] !== 'admin') { echo 'Access denied'; exit; }
 
@@ -48,5 +46,4 @@ $cats = $mysqli->query('SELECT * FROM categories ORDER BY name')->fetch_all(MYSQ
  <div class="form-check mb-2"><input class="form-check-input" type="checkbox" name="available" checked> Available</div>
  <button class="btn btn-primary">Add</button>
 </form>
-
-
+</div></body></html>
