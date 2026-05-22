@@ -111,7 +111,7 @@ khadok/
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/khadok.git
+git clone https://github.com/GamerGiri/khadok.git
 ```
 
 ---
