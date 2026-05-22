@@ -42,6 +42,7 @@ $rests = $res->get_result()->fetch_all(MYSQLI_ASSOC);
   padding: 6px 14px;
   font-size: 0.85rem;
 }
+    
 </style>
 </head>
 

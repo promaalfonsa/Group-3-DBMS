@@ -1,6 +1,6 @@
 <?php
-require 'db.php';
-require 'functions.php';
+$pageTitle = "Restaurant Menu";
+require 'restaurant_layout.php';
 
 if (!is_logged_in()) { header('Location: login.php'); exit; }
 
@@ -28,13 +28,7 @@ $stmt->bind_param('i', $rid);
 $stmt->execute();
 $items = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>My Menu Items</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+
 <style>
 .menu-grid {
   display: grid;
@@ -76,9 +70,9 @@ $items = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
   font-size: 0.8rem;
 }
 </style>
-</head>
 
-<body class="p-4">
+
+
 <div class="container main-wrapper">
 
   <div class="d-flex justify-content-between align-items-center mb-4">
